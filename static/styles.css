@@ -1,72 +1,58 @@
 body {
     font-family: 'Playfair Display', serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #cdeffd, #f6faff);
-    color: #333;
-  }
-  
-  .navbar {
-    background-color: #004080;
+    scroll-behavior: smooth;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 128, 255, 0.7)), url('https://source.unsplash.com/1600x900/?water') no-repeat center center/cover;
     color: white;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  .hero {
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  .hero h2 {
-    font-size: 2rem;
-    color: #004080;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    color: #333;
-  }
-  
-  .hero button {
-    background-color: #007acc;
+}
+
+/* About Section */
+.about-section, .features-section {
+    background: #1f1f1f;
+    color: #bbbbbb;
+}
+
+/* Subscribe Section */
+.subscribe-section {
+    background: linear-gradient(to bottom, #007bff, #0056b3);
     color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .newsletter {
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  .newsletter form {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-  
-  .newsletter input {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .newsletter button {
-    background-color: #004080;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #004080;
-    color: white;
-  }
-  
+}
+
+/* Navbar */
+.navbar {
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar.scrolled {
+    background-color: #000000;
+}
+
+/* Custom Input */
+.custom-input {
+    background-color: #333333;
+    border: 1px solid #555555;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.custom-input::placeholder {
+    color: #aaaaaa;
+}
+
+/* Footer */
+.footer {
+    background-color: #1f1f1f;
+    color: #aaaaaa;
+}

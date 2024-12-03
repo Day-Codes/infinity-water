@@ -1,46 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Infinite Water™</title>
-  <link rel="stylesheet" href="/static/styles.css">
-  <script defer src="/static/script.js"></script>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'GA_TRACKING_ID');
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Water™</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <nav class="navbar">
-    <h1>Infinite Water™</h1>
-  </nav>
-  
-  <main>
-    <section class="hero">
-      <h2>The water that never runs out... unless you pour it out. 💧✨</h2>
-      <p>Tired of refilling your water bottles? Infinite Water™ is the first-ever bottled water infused with the essence of eternal hydration technology.</p>
-      <button id="learn-more">Learn More</button>
+<body class="dark-theme">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">🌊 Infinite Water™</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#subscribe">Subscribe</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-center text-white d-flex flex-column align-items-center justify-content-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Infinite Water™</h1>
+            <p class="lead tagline">The water that never runs out... unless you pour it out. 💧✨</p>
+            <a href="#about" class="btn btn-primary btn-lg mt-4">Learn More</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5 text-center">
+        <div class="container">
+            <h2 class="mb-4">About Infinite Water™</h2>
+            <p class="lead">
+                Tired of refilling your water bottles? <b>Infinite Water™</b> is the first-ever bottled water infused with the essence of <b>"eternal hydration technology"</b>. 
+                Perfect for anyone who wants to pretend they're saving the planet while doing absolutely nothing to help.
+            </p>
+        </div>
     </section>
 
-    <section class="newsletter">
-      <h3>Join the Infinite Water Movement</h3>
-      <form id="newsletter-form">
-        <input type="email" id="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <p id="response-message"></p>
+    <!-- Features Section -->
+    <section id="features" class="features-section py-5 text-center">
+        <div class="container">
+            <h2 class="mb-4">Features</h2>
+            <div class="row my-5">
+                <div class="col-md-4">
+                    <h4>🌟 Flavors</h4>
+                    <p>Clear, Transparent, Invisible.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>💧 Organic H2O</h4>
+                    <p>100% organic water with some air.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>⚠️ Compact Size</h4>
+                    <p>Fits in your hand and under a microscope.</p>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2024 Infinite Water™. All Rights Reserved.</p>
-  </footer>
+    <!-- Subscription Section -->
+    <section id="subscribe" class="subscribe-section py-5 text-center">
+        <div class="container">
+            <h2 class="text-white">Subscribe to Infinite Water™</h2>
+            <p class="lead text-muted">Join our newsletter for updates on the water revolution.</p>
+            <form id="newsletter-form" class="mt-4">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <input type="email" class="form-control custom-input" placeholder="Enter your email" required>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Subscribe</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4 text-center text-white">
+        <div class="container">
+            <p>© 2024 Infinite Water™. All rights reserved. <br>This is a joke! <br> Powered by Eternal Hydration Tech.</p>
+        </div>
+    </footer>
+
+    <!-- Pop-up Modal
+    <div id="popupModal" class="popup-modal">
+        <div class="popup-content">
+            <h3>Welcome to Infinite Water™</h3>
+            <p>Experience hydration like never before! Sign up now and get exclusive updates.</p>
+            <button id="closePopup" class="btn btn-primary">Close</button>
+        </div>
+    </div> -->
+
+    <!-- JS Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Handle newsletter form submission
+        $('#newsletter-form').on('submit', function(event) {
+            event.preventDefault();
+            const email = $(this).find('input').val();
+            $.post('/newsletter', { email: email }, function(response) {
+                alert(response.message);
+            }).fail(function() {
+                alert('Error subscribing. Please try again.');
+            });
+        });
+
+        // Show popup on page load
+        $(document).ready(function() {
+            $('#popupModal').fadeIn();
+        });
+
+        // Close the popup
+        $('#closePopup').click(function() {
+            $('#popupModal').fadeOut();
+        });
+    </script>
 </body>
 </html>
